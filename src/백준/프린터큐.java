@@ -23,12 +23,12 @@ class 프린터큐 {
     }
 
     public static boolean checkPriority(Queue<int[]> queue) {
-        boolean check = false;
+        boolean check = true;
         int doc = queue.peek()[1];
 
         for(int[] priority : queue) {
             if(priority[1] > doc) {
-                check = true;
+                check = false;
             }
         }
 
